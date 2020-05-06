@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -u
+
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+export COMPOSE_FILE="docker-compose.development.yml"
+
+exec docker-compose "$@"

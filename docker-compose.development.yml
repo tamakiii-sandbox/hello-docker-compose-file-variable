@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  php-fpm:
+    build:
+      context: api
+      dockerfile: development.dockerfile
+    volumes:
+      - ./api:/usr/local/app/hello-docker-compose-file-variable
