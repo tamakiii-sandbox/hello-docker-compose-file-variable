@@ -6,5 +6,5 @@ services:
       context: api
       dockerfile: Dockerfile
       target: ${TARGET:-production-pseudo}
-    volumes:
-      - ./api:/usr/local/app/hello-docker-compose-file-variable
+    # volumes:
+    #   - ./api:/usr/local/app/hello-docker-compose-file-variable
