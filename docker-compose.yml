@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  php-fpm:
+    image: hello-docker-compose-file-variable_php-fpm:${TAG:-production-pseudo}
+    build:
+      context: api
+      dockerfile: Dockerfile
+      target: ${TARGET:-production-pseudo}
+    # volumes:
+    #   - ./api:/usr/local/app/hello-docker-compose-file-variable
