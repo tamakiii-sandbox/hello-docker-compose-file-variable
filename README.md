@@ -14,3 +14,8 @@ make -f docker-dev.mk install
 make -f docker-dev.mk build
 bin/docker-compose-development run --rm php-fpm bash
 ~~~
+
+## Deleting Docker images
+~~~sh
+docker image ls -q 'hello-docker-compose-file-variable_*' | xargs docker image rm -f
+~~~
